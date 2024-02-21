@@ -2,7 +2,7 @@ from rest_framework.response import Response
 from .models import Note
 from .serializers import NoteSerializer
 
-
+# Create your views here.
 def getNotesList(request):
     notes = Note.objects.all().order_by('-updated')
     serializer = NoteSerializer(notes, many=True)
@@ -14,7 +14,7 @@ def getNoteDetail(request, pk):
     serializer = NoteSerializer(notes, many=False)
     return Response(serializer.data)
 
-
+#get single note
 def createNote(request):
     data = request.data
     note = Note.objects.create(
@@ -33,7 +33,7 @@ def updateNote(request, pk):
 
     return serializer.data
 
-
+#delete single note
 def deleteNote(request, pk):
     note = Note.objects.get(id=pk)
     note.delete()
