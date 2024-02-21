@@ -73,9 +73,7 @@ def getNote(request, pk):
     if request.method == 'PUT':
         return updateNote(request, pk)
 
-    if request.method == 'DELETE':
-        return deleteNote(request, pk)
-
+    
 
 # @api_view(['POST'])
 # def createNote(request):
@@ -96,4 +94,4 @@ def getNote(request, pk):
 #     if serializer.is_valid():
 #         serializer.save()
 
-#     return Response(serializer.data)
+#     return Response(serializer.data) 
