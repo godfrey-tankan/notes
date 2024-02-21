@@ -2,7 +2,7 @@ from rest_framework.response import Response
 from .models import Note
 from .serializers import NoteSerializer
 
-
+# Create your views here.
 def getNotesList(request):
     notes = Note.objects.all().order_by('-updated')
     serializer = NoteSerializer(notes, many=True)
