@@ -47,13 +47,6 @@ def getRoutes(request):
     ]
     return Response(routes)
 
-
-# /notes GET
-# /notes POST
-# /notes/<id> GET
-# /notes/<id> PUT
-# /notes/<id> DELETE
-
 @api_view(['GET', 'POST'])
 def getNotes(request):
 
