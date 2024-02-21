@@ -14,7 +14,7 @@ def getNoteDetail(request, pk):
     serializer = NoteSerializer(notes, many=False)
     return Response(serializer.data)
 
-
+#get single note
 def createNote(request):
     data = request.data
     note = Note.objects.create(
