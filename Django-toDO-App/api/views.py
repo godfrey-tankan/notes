@@ -54,6 +54,7 @@ def getRoutes(request):
 # /notes/<id> PUT
 # /notes/<id> DELETE
 
+@api_view(['GET', 'POST'])
 def getNotes(request):
 
     if request.method == 'GET':
