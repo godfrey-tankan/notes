@@ -96,11 +96,4 @@ def getNote(request, pk):
 #     if serializer.is_valid():
 #         serializer.save()
 
-#     return Response(serializer.data)
-
-
-# @api_view(['DELETE'])
-# def deleteNote(request, pk):
-#     note = Note.objects.get(id=pk)
-#     note.delete()
-#     return Response('Note was deleted!')
+#     return Response(serializer.data) 
