@@ -73,7 +73,9 @@ def getNote(request, pk):
     if request.method == 'PUT':
         return updateNote(request, pk)
 
-    
+    if request.method == 'DELETE':
+        return deleteNote(request, pk)
+
 
 # @api_view(['POST'])
 # def createNote(request):
