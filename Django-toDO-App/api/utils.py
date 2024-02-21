@@ -3,11 +3,7 @@ from .models import Note
 from .serializers import NoteSerializer
 
 
-def getNotesList(request):
-    notes = Note.objects.all().order_by('-updated')
-    serializer = NoteSerializer(notes, many=True)
-    return Response(serializer.data)
-
+#
 
 def getNoteDetail(request, pk):
     notes = Note.objects.get(id=pk)
