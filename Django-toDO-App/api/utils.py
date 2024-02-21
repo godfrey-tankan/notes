@@ -33,7 +33,7 @@ def updateNote(request, pk):
 
     return serializer.data
 
-
+#delete single note
 def deleteNote(request, pk):
     note = Note.objects.get(id=pk)
     note.delete()
