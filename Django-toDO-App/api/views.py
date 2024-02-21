@@ -57,7 +57,7 @@ def getNotes(request):
         return createNote(request)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
+# @api_view(['GET', 'PUT', 'DELETE'])
 def getNote(request, pk):
 
     if request.method == 'GET':
@@ -69,12 +69,3 @@ def getNote(request, pk):
     if request.method == 'DELETE':
         return deleteNote(request, pk)
 
-
-# @api_view(['POST'])
-# def createNote(request):
-#     data = request.data
-#     note = Note.objects.create(
-#         body=data['body']
-#     )
-#     serializer = NoteSerializer(note, many=False)
-#     return Response(serializer.data)
