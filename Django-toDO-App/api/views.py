@@ -57,7 +57,7 @@ def getNotes(request):
         return createNote(request)
 
 
-# @api_view(['GET', 'PUT', 'DELETE'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def getNote(request, pk):
 
     if request.method == 'GET':
